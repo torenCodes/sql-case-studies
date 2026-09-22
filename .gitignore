@@ -1,0 +1,11 @@
+# local SQLite / DB Browser scratch
+*.sqbpro
+*.db-journal
+*.db-wal
+*.db-shm
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.claude/
