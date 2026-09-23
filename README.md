@@ -18,7 +18,7 @@ Written up for a general audience at
 
 *Which genres, ratings, and titles actually drive video game sales?*
 
-Three questions against 16,719 titles released between 1980 and 2020:
+Three questions against 16,719 titles released between 1980 and 2017:
 
 | Question | Answer |
 |---|---|

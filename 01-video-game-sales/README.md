@@ -8,7 +8,7 @@ new title ever worth as much as another entry in a series that already sells?
 
 The dataset is a public Kaggle set of video game titles with genre, platform, critic and
 user scores, and unit sales broken out by region. **16,719 titles released between 1980
-and 2020.**
+and 2017.**
 
 Source: [Video Game Sales with Ratings](https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings)
 (Kaggle, `rush4ratio`) — loaded into SQLite as `data/vgsales.db`, table `games`.
@@ -46,7 +46,7 @@ so this describes the rated half of the catalogue.
 
 Only one. Wii Sports, a single standalone title at the time of the published data, is the
 only non-franchise game whose sales competed with series like Call of Duty and Grand
-Theft Auto. It sold about a third of every Call of Duty title combined, and 67% more than
+Theft Auto. It sold about a third of every Call of Duty title combined, and about 18% more than
 the entire Final Fantasy franchise.
 
 The interesting part is the method rather than the answer. There is no "franchise" column
