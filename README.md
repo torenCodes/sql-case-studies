@@ -23,7 +23,7 @@ Three questions against 16,719 titles released between 1980 and 2017:
 | Question | Answer |
 |---|---|
 | Which genre is most popular in each region? | Action, in every region except Japan, which prefers Role-Playing |
-| How do sales relate to critic score? | Titles rated above 90 average more than double the next tier, and the decline is steady from there |
+| How do sales relate to critic score? | Titles rated 90 or above average more than twice the sales of the next tier, and the decline is steady from there |
 | Which standalone titles compete with franchises? | Exactly one — Wii Sports |
 
 SQLite · DB Browser for SQLite · Power BI · [read the full write-up](01-video-game-sales/)

@@ -32,9 +32,9 @@ Action leads in every region except Japan, which prefers RPGs.
 
 ### How do sales relate to critic score, and by how much?
 
-Titles rated "Great" — a critic score above 90 — sell the best, and outperform "Good"
-titles by more than double. From there the drop is steady: the worse the rating, the
-lower the sales.
+Titles rated "Great", a critic score of 90 or above, sell best, averaging more than twice
+as many copies as "Good" titles. From there the decline is steady: the lower the rating,
+the lower the sales.
 
 One caveat worth stating up front: **51% of titles in the dataset have no critic score at
 all**, including many early NES classics. Those are excluded rather than counted as zero,
@@ -44,9 +44,9 @@ so this describes the rated half of the catalogue.
 
 ### Which standalone titles compete with or outperform franchises?
 
-Only one. Wii Sports, a single standalone title at the time of the published data, is the
-only non-franchise game whose sales competed with series like Call of Duty and Grand
-Theft Auto. It sold about a third of every Call of Duty title combined, and about 18% more than
+Only one. Wii Sports, still a standalone title when the data was published, is the only
+non-franchise game whose sales compete with series like Call of Duty and Grand Theft Auto:
+it sold about a third as much as every Call of Duty title combined, and about 18% more than
 the entire Final Fantasy franchise.
 
 The interesting part is the method rather than the answer. There is no "franchise" column
