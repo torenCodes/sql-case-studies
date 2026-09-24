@@ -28,13 +28,20 @@ Three questions against 16,719 titles released between 1980 and 2017:
 
 SQLite · DB Browser for SQLite · Power BI · [read the full write-up](01-video-game-sales/)
 
-### 02 — Gas Prices and Low-Cost Retailers
+### [02 — University Major Payoff](02-university-major-payoff/)
 
-*Do gas prices move earnings at general merchandise retailers?*
+*Which college majors actually pay for themselves?*
 
-In progress. The honest result so far is a weak correlation, which is a real finding
-rather than a failed one, and it may reshape the question. Published here when the
-report is finished.
+Three questions against 30,000 synthetic graduates across 19 majors, calibrated to
+published ROI research:
+
+| Question | Answer |
+|---|---|
+| Which major has the best ROI? | Electrical engineering, at 759% and about $105,000 a year; only humanities and fine arts come out negative |
+| How much do internships and finishing on time matter? | They raise the return in all 19 majors, and near the bottom of the table they decide whether a degree pays at all |
+| Which degrees pay for themselves fastest? | The ones that pay the most: cost barely varies by major, so salary sets the payback order |
+
+SQLite · DB Browser for SQLite · Power BI · [read the full write-up](02-university-major-payoff/)
 
 ---
 
