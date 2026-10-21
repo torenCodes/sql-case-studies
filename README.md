@@ -2,13 +2,14 @@
 
 Small, self-contained analyses by **Toren Lehrmann**. Each one starts from a business
 question someone non-technical might actually ask, answers it in SQL, and presents the
-result as a Power BI report.
+result in Power BI or Tableau.
 
 The emphasis is not query syntax. It is the work around the query: choosing what to
 measure, deciding what the data can't tell you, and landing on a single defensible answer.
 
-Written up for a general audience at
-**[databytoren.com/projects/sql-case-study.html](https://databytoren.com/projects/sql-case-study.html)**.
+Written up for a general audience at **[databytoren.com](https://databytoren.com)**: the
+first two as [SQL mini case studies](https://databytoren.com/projects/sql-case-study.html),
+the third as its own [case study](https://databytoren.com/projects/diabetes-care-scorecard.html).
 
 ---
 
@@ -43,11 +44,26 @@ published ROI research:
 
 SQLite · DB Browser for SQLite · Power BI · [read the full write-up](02-university-major-payoff/)
 
+### [03 — Diabetes Care Scorecard](03-healthcare-diabetes-a1c/)
+
+*Among adults with diabetes, who had their A1c tested in 2021, and who was missed?*
+
+A healthcare quality measure on Synthea's synthetic patient data (1,163 simulated
+patients), published as an [interactive Tableau dashboard](https://public.tableau.com/app/profile/toren.lehrmann/viz/Healthcare-SyntheticDiabetesAnalysis/DiabetesCareScorecard):
+
+| Question | Answer |
+|---|---|
+| What share of eligible patients were tested? | 85.1%: 40 of 47 |
+| Who was missed? | 7 patients, each tested in 2019 or 2020 but not in 2021: the follow-up list |
+| Where are the gaps? | Patients aged 18–44 were tested least (6 of 10), though groups this small are directional |
+
+SQLite · DB Browser for SQLite · Tableau Public · [read the full write-up](03-healthcare-diabetes-a1c/)
+
 ---
 
 ## How to run these yourself
 
-Every project ships the SQLite database it was built against, so the queries are
+Projects 01 and 02 ship the SQLite database they were built against, so the queries are
 reproducible without downloading anything:
 
 ```bash
@@ -55,8 +71,12 @@ sqlite3 01-video-game-sales/data/vgsales.db < 01-video-game-sales/queries/01-top
 ```
 
 Or open the `.db` in [DB Browser for SQLite](https://sqlitebrowser.org/) and paste a
-query in. The `.pbix` files open in Power BI Desktop; each project also has a PDF export
-of its dashboard for anyone who doesn't.
+query in. The `.pbix` files open in Power BI Desktop; each of those projects also has a PDF
+export of its dashboard for anyone who doesn't.
+
+Project 03's database is built from Synthea's public sample data and is about 196 MB, over
+GitHub's file limit, so its README explains how to rebuild it instead. Its dashboard is
+live on Tableau Public.
 
 ## A note on the data
 
