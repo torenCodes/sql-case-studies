@@ -94,15 +94,6 @@ GitHub's file limit, and the source data is freely available. To reproduce:
    `claims_transactions`, `imaging_studies` and `payer_transitions` tables aren't needed.)
 3. Run the queries in order; each one states its expected result.
 
-## How I worked
-
-I used Claude throughout, as a tutor and a second pair of hands: explaining SQL patterns,
-drafting queries, and walking me through Tableau. My Windows machine's application control
-policy blocked my Python install, so Claude built the SQLite database from the CSV files. I
-ran every query myself in a SQLite viewer and checked as I went: row counts after every
-join, totals reconciled from 73 diagnosed to 47 eligible to 40 tested, and every number on
-the dashboard reproduced from the SQL.
-
 ## Next steps
 
 - Rerun on a larger Synthea dataset, where providers have enough patients for a comparison
