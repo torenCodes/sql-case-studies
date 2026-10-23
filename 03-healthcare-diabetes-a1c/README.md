@@ -9,6 +9,9 @@ few months, and the patients who miss it are the ones worth a follow-up call. Th
 defines who counts, measures how many were tested, and turns the gap into a list someone
 could act on.
 
+A second dashboard page widens the view from one disease to ten chronic conditions: which
+ones occur together, and how the cost of care changes as they add up.
+
 **Live dashboard:** [Diabetes Care Scorecard, 2021 on Tableau Public](https://public.tableau.com/app/profile/toren.lehrmann/viz/Healthcare-SyntheticDiabetesAnalysis/DiabetesCareScorecard)
 · Write-up: [databytoren.com](https://databytoren.com/projects/diabetes-care-scorecard.html)
 
@@ -47,6 +50,40 @@ By county (eligible / tested): Middlesex 13 / 11, Worcester 6 / 6, Suffolk 6 / 5
 Norfolk 5 / 4, Essex 5 / 3, Plymouth 3 / 3, Bristol 3 / 3, Barnstable 3 / 2, Hampden 2 / 2,
 Franklin 1 / 1.
 
+## Page 2: chronic condition burden
+
+The second page of the dashboard looks at all adults rather than one measure.
+
+| | Definition |
+|---|---|
+| Group | 790 adults: aged 18 or older on 2021-12-31, not deceased before 2020-01-01 |
+| Window | Visits and cost from encounters in 2020 and 2021 |
+| Chronic conditions | A hand-picked list of 10: Hypertension, Diabetes, Prediabetes, Hyperlipidemia, Coronary Heart Disease, Stroke, Atrial Fibrillation, Metabolic syndrome, Osteoporosis, Anemia. The conditions table also holds social findings and situations that are not diseases, so a plain count of rows would be wrong. |
+
+| Chronic conditions | Adults | Average visits, 2020–21 | Average cost per adult |
+|---|---|---|---|
+| 0 | 255 | 6.7 | $32,253 |
+| 1 | 216 | 7.2 | $28,715 |
+| 2 | 153 | 7.3 | $29,835 |
+| 3 | 89 | 7.5 | $28,891 |
+| 4 or more | 77 | 13.9 | $76,908 |
+
+- Adults with 4 or more chronic conditions are about 10% of adults (77 of 790) and about 22%
+  of the cost ($5.92M of $27.48M), at roughly 2.7 times the average cost of the
+  3-condition group.
+- Prediabetes and anemia overlap the most, followed by anemia with hypertension and
+  hypertension with prediabetes. 68 of the 73 patients with diabetes also have metabolic
+  syndrome.
+- The heat map (query 07) counts every patient in the dataset, not only the 790 adults.
+
+Keep in mind: the overlaps and costs come from the simulator's rules, so they show what the
+method can do, not how real patients behave. The 4+ group is only 77 adults. The
+0-condition group costs about as much as groups 1 to 3 because simulated adults without a
+chronic condition still have pregnancies and injuries.
+
+An inner join to the chronic conditions would silently drop every adult who has none, the
+largest group. Query 08 uses LEFT JOIN plus COALESCE, and the groups reconcile back to 790.
+
 ## Where the data changed the plan
 
 - **"Poor control" (A1c over 9%) returned 0 of 40**, so the dashboard reports "at or above
@@ -76,9 +113,13 @@ Franklin 1 / 1.
 │   ├── 04_a1c_distribution.sql           latest result per patient, bucketed
 │   ├── 05_testing_rate_by_county.sql     the grouping used on the map
 │   ├── 06_dashboard_export.sql           one row per eligible patient, feeds Tableau
+│   ├── 07_condition_pairs.sql            self-join: which conditions occur together (page 2)
+│   ├── 08_chronic_burden_summary.sql     visits and cost by number of conditions (page 2)
 │   └── query-log.sql                     the full working log
 └── data/
-    └── diabetes_a1c_2021_patients.csv    the export from query 06 (47 rows)
+    ├── diabetes_a1c_2021_patients.csv    the export from query 06 (47 rows)
+    ├── condition_pairs.csv               the export from query 07 (100 rows)
+    └── chronic_burden_summary.csv        the export from query 08 (5 rows)
 ```
 
 Each query file opens with what it does and the result it should return.

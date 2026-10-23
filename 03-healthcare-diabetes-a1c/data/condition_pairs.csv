@@ -1,0 +1,101 @@
+condition_a,condition_b,patients_with_both
+Anemia (disorder),Anemia (disorder),324
+Anemia (disorder),Atrial Fibrillation,20
+Anemia (disorder),Coronary Heart Disease,22
+Anemia (disorder),Diabetes,53
+Anemia (disorder),Hyperlipidemia,60
+Anemia (disorder),Hypertension,107
+Anemia (disorder),Metabolic syndrome X (disorder),51
+Anemia (disorder),Osteoporosis (disorder),26
+Anemia (disorder),Prediabetes,275
+Anemia (disorder),Stroke,23
+Atrial Fibrillation,Anemia (disorder),20
+Atrial Fibrillation,Atrial Fibrillation,44
+Atrial Fibrillation,Coronary Heart Disease,4
+Atrial Fibrillation,Diabetes,4
+Atrial Fibrillation,Hyperlipidemia,18
+Atrial Fibrillation,Hypertension,21
+Atrial Fibrillation,Metabolic syndrome X (disorder),4
+Atrial Fibrillation,Osteoporosis (disorder),13
+Atrial Fibrillation,Prediabetes,23
+Atrial Fibrillation,Stroke,12
+Coronary Heart Disease,Anemia (disorder),22
+Coronary Heart Disease,Atrial Fibrillation,4
+Coronary Heart Disease,Coronary Heart Disease,65
+Coronary Heart Disease,Diabetes,7
+Coronary Heart Disease,Hyperlipidemia,13
+Coronary Heart Disease,Hypertension,13
+Coronary Heart Disease,Metabolic syndrome X (disorder),7
+Coronary Heart Disease,Osteoporosis (disorder),6
+Coronary Heart Disease,Prediabetes,22
+Coronary Heart Disease,Stroke,7
+Diabetes,Anemia (disorder),53
+Diabetes,Atrial Fibrillation,4
+Diabetes,Coronary Heart Disease,7
+Diabetes,Diabetes,73
+Diabetes,Hyperlipidemia,16
+Diabetes,Hypertension,39
+Diabetes,Metabolic syndrome X (disorder),68
+Diabetes,Osteoporosis (disorder),8
+Diabetes,Prediabetes,50
+Diabetes,Stroke,4
+Hyperlipidemia,Anemia (disorder),60
+Hyperlipidemia,Atrial Fibrillation,18
+Hyperlipidemia,Coronary Heart Disease,13
+Hyperlipidemia,Diabetes,16
+Hyperlipidemia,Hyperlipidemia,138
+Hyperlipidemia,Hypertension,46
+Hyperlipidemia,Metabolic syndrome X (disorder),16
+Hyperlipidemia,Osteoporosis (disorder),23
+Hyperlipidemia,Prediabetes,68
+Hyperlipidemia,Stroke,16
+Hypertension,Anemia (disorder),107
+Hypertension,Atrial Fibrillation,21
+Hypertension,Coronary Heart Disease,13
+Hypertension,Diabetes,39
+Hypertension,Hyperlipidemia,46
+Hypertension,Hypertension,292
+Hypertension,Metabolic syndrome X (disorder),38
+Hypertension,Osteoporosis (disorder),15
+Hypertension,Prediabetes,104
+Hypertension,Stroke,22
+Metabolic syndrome X (disorder),Anemia (disorder),51
+Metabolic syndrome X (disorder),Atrial Fibrillation,4
+Metabolic syndrome X (disorder),Coronary Heart Disease,7
+Metabolic syndrome X (disorder),Diabetes,68
+Metabolic syndrome X (disorder),Hyperlipidemia,16
+Metabolic syndrome X (disorder),Hypertension,38
+Metabolic syndrome X (disorder),Metabolic syndrome X (disorder),68
+Metabolic syndrome X (disorder),Osteoporosis (disorder),8
+Metabolic syndrome X (disorder),Prediabetes,49
+Metabolic syndrome X (disorder),Stroke,4
+Osteoporosis (disorder),Anemia (disorder),26
+Osteoporosis (disorder),Atrial Fibrillation,13
+Osteoporosis (disorder),Coronary Heart Disease,6
+Osteoporosis (disorder),Diabetes,8
+Osteoporosis (disorder),Hyperlipidemia,23
+Osteoporosis (disorder),Hypertension,15
+Osteoporosis (disorder),Metabolic syndrome X (disorder),8
+Osteoporosis (disorder),Osteoporosis (disorder),58
+Osteoporosis (disorder),Prediabetes,32
+Osteoporosis (disorder),Stroke,15
+Prediabetes,Anemia (disorder),275
+Prediabetes,Atrial Fibrillation,23
+Prediabetes,Coronary Heart Disease,22
+Prediabetes,Diabetes,50
+Prediabetes,Hyperlipidemia,68
+Prediabetes,Hypertension,104
+Prediabetes,Metabolic syndrome X (disorder),49
+Prediabetes,Osteoporosis (disorder),32
+Prediabetes,Prediabetes,341
+Prediabetes,Stroke,29
+Stroke,Anemia (disorder),23
+Stroke,Atrial Fibrillation,12
+Stroke,Coronary Heart Disease,7
+Stroke,Diabetes,4
+Stroke,Hyperlipidemia,16
+Stroke,Hypertension,22
+Stroke,Metabolic syndrome X (disorder),4
+Stroke,Osteoporosis (disorder),15
+Stroke,Prediabetes,29
+Stroke,Stroke,49

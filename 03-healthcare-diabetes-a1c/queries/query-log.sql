@@ -167,3 +167,66 @@ FROM eligible e
 LEFT JOIN latest_a1c l ON l.PATIENT = e.patient_id AND l.rn = 1
 ORDER BY e.county, e.patient_id;
 -- expect 47 rows, 8 columns; exported as diabetes_a1c_2021_patients.csv
+
+
+-- Queries 7-8 (dashboard page 2: chronic condition burden)
+
+-- 07_condition_pairs.sql (self-join, feeds the heat map)
+
+WITH chronic AS (
+  SELECT DISTINCT PATIENT AS patient_id, DESCRIPTION AS condition
+  FROM conditions
+  WHERE DESCRIPTION IN ('Hypertension', 'Diabetes', 'Prediabetes', 'Hyperlipidemia',
+                        'Coronary Heart Disease', 'Stroke', 'Atrial Fibrillation',
+                        'Metabolic syndrome X (disorder)', 'Osteoporosis (disorder)',
+                        'Anemia (disorder)')
+)
+SELECT a.condition AS condition_a,
+       b.condition AS condition_b,
+       COUNT(*) AS patients_with_both
+FROM chronic a
+JOIN chronic b
+  ON b.patient_id = a.patient_id
+-- AND a.condition < b.condition would keep each pair once; leaving it out
+-- returns the whole grid, which the heat map needs
+GROUP BY a.condition, b.condition
+ORDER BY a.condition, b.condition;
+-- expect 100 rows (10 x 10); exported as condition_pairs.csv
+
+
+-- 08_chronic_burden_summary.sql (LEFT JOIN, CASE WHEN, COALESCE; feeds the bar chart)
+
+WITH chronic AS (
+  SELECT DISTINCT PATIENT AS Patient, DESCRIPTION AS Condition
+  FROM conditions c
+  WHERE DESCRIPTION IN ('Hypertension', 'Diabetes', 'Prediabetes', 'Hyperlipidemia',
+                        'Coronary Heart Disease', 'Stroke', 'Atrial Fibrillation',
+                        'Metabolic syndrome X (disorder)', 'Osteoporosis (disorder)',
+                        'Anemia (disorder)')
+),
+burden AS (
+  SELECT p.Id AS patient_id,
+         COUNT(ch.Condition) AS Num_Chronic
+  FROM patients p
+  LEFT JOIN chronic ch ON ch.Patient = p.Id
+  WHERE (p.DEATHDATE IS NULL OR p.DEATHDATE >= '2020-01-01')
+    AND (julianday('2021-12-31') - julianday(p.BIRTHDATE)) / 365.25 >= 18
+  GROUP BY p.Id
+),
+visits AS (
+  SELECT PATIENT, COUNT(*) AS num_visits, SUM(TOTAL_CLAIM_COST) AS total_cost
+  FROM encounters
+  WHERE START >= '2020-01-01' AND START < '2022-01-01'
+  GROUP BY PATIENT
+)
+SELECT
+  CASE WHEN b.num_chronic >= 4 THEN '4+' ELSE CAST(b.num_chronic AS TEXT) END AS chronic_group,
+  COUNT(*) AS adults,
+  ROUND(AVG(COALESCE(v.num_visits, 0)), 1) AS avg_visits,
+  ROUND(AVG(COALESCE(v.total_cost, 0)), 0) AS avg_cost,
+  ROUND(SUM(COALESCE(v.total_cost, 0)), 0) AS total_cost
+FROM burden b
+LEFT JOIN visits v ON v.PATIENT = b.patient_id
+GROUP BY chronic_group
+ORDER BY chronic_group;
+-- expect 5 rows; adults 255, 216, 153, 89, 77 (sum 790); exported as chronic_burden_summary.csv

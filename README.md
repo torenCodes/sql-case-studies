@@ -56,6 +56,7 @@ patients), published as an [interactive Tableau dashboard](https://public.tablea
 | What share of eligible patients were tested? | 85.1%: 40 of 47 |
 | Who was missed? | 7 patients, each tested in 2019 or 2020 but not in 2021: the follow-up list |
 | Where are the gaps? | Patients aged 18–44 were tested least (6 of 10), though groups this small are directional |
+| What do chronic conditions cost, as they add up? | On a second dashboard page: adults with 4 or more are about 10% of adults and about 22% of simulated care cost |
 
 SQLite · DB Browser for SQLite · Tableau Public · [read the full write-up](03-healthcare-diabetes-a1c/)
 
