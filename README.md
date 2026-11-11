@@ -9,7 +9,9 @@ measure, deciding what the data can't tell you, and landing on a single defensib
 
 Written up for a general audience at **[databytoren.com](https://databytoren.com)**: the
 first two as [SQL mini case studies](https://databytoren.com/projects/sql-case-study.html),
-the third as its own [case study](https://databytoren.com/projects/diabetes-care-scorecard.html).
+the third and fourth as their own case studies:
+[Diabetes Care Scorecard](https://databytoren.com/projects/diabetes-care-scorecard.html) and
+[Airline Delays](https://databytoren.com/projects/airline-delays).
 
 ---
 
@@ -60,6 +62,22 @@ patients), published as an [interactive Tableau dashboard](https://public.tablea
 
 SQLite · DB Browser for SQLite · Tableau Public · [read the full write-up](03-healthcare-diabetes-a1c/)
 
+### [04 — Airline Delays: The 7 a.m. Domino](04-airline-delays/)
+
+*Why are flights late, what is it costing, and what can an airline change?*
+
+Every domestic flight reported by the major U.S. airlines in July 2026 (631,970, real
+government data), followed plane by plane with window functions:
+
+| Question | Answer |
+|---|---|
+| Why are we late? | 41.8% of delay minutes, among flights arriving 15+ min late, came from a plane already late from its previous flight |
+| Does a late start ruin the day? | A late first flight makes finishing the day 1+ hour late 1.7× as likely, yet 29.5% of late starters still land early |
+| What decides it? | Time on the ground: after a late arrival with under an hour between flights, the next flight leaves late about 9 times in 10 |
+| What is at stake? | Late planes with under an hour on the ground added 734,024 delay minutes, about $74M at stake; Atlanta is the place to start |
+
+SQLite · DB Browser for SQLite · Power BI · [read the full write-up](04-airline-delays/)
+
 ---
 
 ## How to run these yourself
@@ -77,7 +95,8 @@ export of its dashboard for anyone who doesn't.
 
 Project 03's database is built from Synthea's public sample data and is about 196 MB, over
 GitHub's file limit, so its README explains how to rebuild it instead. Its dashboard is
-live on Tableau Public.
+live on Tableau Public. Project 04's database (about 120 MB, from the BTS on-time data) is
+rebuilt the same way, with the script in its `scripts/` folder.
 
 ## A note on the data
 

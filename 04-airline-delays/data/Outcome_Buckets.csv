@@ -1,0 +1,11 @@
+start_group,end_bucket,plane_days,pct_of_group
+late start,1: early,5401,29.5
+late start,2: 0 to 14,2629,14.4
+late start,3: 15 to 59,4598,25.1
+late start,4: 60 to 179,4218,23.0
+late start,5: 180+,1454,7.9
+on-time start,1: early,53019,44.0
+on-time start,2: 0 to 14,20216,16.8
+on-time start,3: 15 to 59,25705,21.3
+on-time start,4: 60 to 179,16527,13.7
+on-time start,5: 180+,4963,4.1

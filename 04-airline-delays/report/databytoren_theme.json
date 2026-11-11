@@ -1,0 +1,193 @@
+{
+  "name": "Data by Toren",
+  "dataColors": [
+    "#336897",
+    "#1FA898",
+    "#96BEE0",
+    "#7FD3C7",
+    "#8A94A0",
+    "#2A5478",
+    "#178F81",
+    "#B2BAC2"
+  ],
+  "background": "#FFFFFF",
+  "secondaryBackground": "#F7F8FA",
+  "foreground": "#12161B",
+  "tableAccent": "#2A5478",
+  "good": "#2E8B5C",
+  "neutral": "#8A94A0",
+  "bad": "#C0392F",
+  "textClasses": {
+    "title": {
+      "fontFace": "Space Grotesk",
+      "fontSize": 14,
+      "color": "#12161B"
+    },
+    "header": {
+      "fontFace": "Space Grotesk",
+      "fontSize": 11,
+      "color": "#12161B"
+    },
+    "label": {
+      "fontFace": "Inter",
+      "fontSize": 10,
+      "color": "#4B5560"
+    },
+    "callout": {
+      "fontFace": "Space Grotesk",
+      "fontSize": 32,
+      "color": "#16304A"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontColor": { "solid": { "color": "#12161B" } },
+            "background": { "solid": { "color": "#FFFFFF" } },
+            "alignment": "left",
+            "fontSize": 14,
+            "fontFamily": "Space Grotesk"
+          }
+        ],
+        "subTitle": [
+          {
+            "show": true,
+            "fontColor": { "solid": { "color": "#69747F" } },
+            "fontSize": 10,
+            "fontFamily": "Inter"
+          }
+        ],
+        "categoryAxis": [
+          {
+            "show": true,
+            "labelColor": { "solid": { "color": "#4B5560" } },
+            "fontFamily": "Inter",
+            "fontSize": 10,
+            "gridlineShow": false,
+            "titleFontSize": 10,
+            "titleFontFamily": "Inter",
+            "titleColor": { "solid": { "color": "#69747F" } }
+          }
+        ],
+        "valueAxis": [
+          {
+            "show": true,
+            "labelColor": { "solid": { "color": "#4B5560" } },
+            "fontFamily": "Inter",
+            "fontSize": 10,
+            "gridlineShow": true,
+            "gridlineColor": { "solid": { "color": "#EBEEF1" } },
+            "gridlineThickness": 1,
+            "titleFontSize": 10,
+            "titleFontFamily": "Inter",
+            "titleColor": { "solid": { "color": "#69747F" } }
+          }
+        ],
+        "legend": [
+          {
+            "show": true,
+            "position": "BottomLeft",
+            "labelColor": { "solid": { "color": "#4B5560" } },
+            "fontFamily": "Inter",
+            "fontSize": 10,
+            "showTitle": false
+          }
+        ],
+        "labels": [
+          {
+            "color": { "solid": { "color": "#4B5560" } },
+            "fontFamily": "Inter",
+            "fontSize": 9
+          }
+        ]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "grid": [
+          {
+            "gridVertical": false,
+            "gridHorizontal": true,
+            "gridHorizontalColor": { "solid": { "color": "#EBEEF1" } },
+            "rowPadding": 4,
+            "outlineColor": { "solid": { "color": "#D8DDE2" } },
+            "outlineWeight": 1
+          }
+        ],
+        "columnHeaders": [
+          {
+            "fontColor": { "solid": { "color": "#12161B" } },
+            "backColor": { "solid": { "color": "#FFFFFF" } },
+            "fontFamily": "Space Grotesk",
+            "fontSize": 10,
+            "outline": "BottomOnly"
+          }
+        ],
+        "values": [
+          {
+            "fontColor": { "solid": { "color": "#333C46" } },
+            "backColor": { "solid": { "color": "#FFFFFF" } },
+            "fontFamily": "Inter",
+            "fontSize": 10,
+            "outline": "None"
+          }
+        ],
+        "total": [
+          {
+            "totals": false
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": { "solid": { "color": "#16304A" } },
+            "fontFamily": "Space Grotesk",
+            "fontSize": 30
+          }
+        ],
+        "categoryLabels": [
+          {
+            "show": true,
+            "color": { "solid": { "color": "#69747F" } },
+            "fontFamily": "Inter",
+            "fontSize": 10
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": { "solid": { "color": "#FFFFFF" } },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}
