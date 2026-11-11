@@ -55,7 +55,8 @@ group, and a buffer wouldn't win back every minute. That's why it is "at stake,"
    "which airports add the most delay on tight turns?"
 4. **Checkpoints.** Each query states row counts and totals that had to match before moving
    on, and one plane's turn times were checked by hand (`06b_hand_check.sql`).
-5. **Power BI.** Seven small CSV exports feed the Power BI report, exported as images.
+5. **Power BI.** Seven small CSV exports feed the Power BI report, exported to PDF
+   ([`report/airline-delays-dashboard.pdf`](report/airline-delays-dashboard.pdf)).
 
 Every judgment call, with what it gave up, is in [`DECISION_LOG.md`](DECISION_LOG.md):
 the dataset, the month, the columns, the exclusions, one-flight days, aircraft swaps, the
@@ -97,8 +98,9 @@ prompts, my answers and the checkpoints.
 │   └── build_db.py                 builds the SQLite database from the BTS CSV
 └── report/
     ├── Airline_Delay_Report.pbix   the Power BI report
+    ├── airline-delays-dashboard.pdf  the report exported to PDF, five pages
     ├── databytoren_theme.json      the report theme
-    └── frames/                     the five report pages as images, plus the summary preview
+    └── frames/                     the five pages as images, plus the summary preview
 ```
 
 Each query file opens with its question and ends with its checkpoints and answers.
